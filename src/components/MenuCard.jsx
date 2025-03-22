@@ -1,11 +1,19 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button, Image } from 'react-bootstrap'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const MenuCard = ({ item }) => {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000, // animation duration
+            once: true,     // whether animation should happen only once
+        });
+    }, []);
     return (
         <div>
-            <div className='c-card'>
+            <div data-aos="zoom-in-up" className='c-card'>
                 <Image src={item.image} alt={item.title} fluid width={250} />
                 <div className='card-content'>
                     <h3 className=''>{item.title}</h3>

@@ -10,6 +10,7 @@
     --yellow-1: rgb(255, 225, 58);
     --light-yellow: rgb(255, 184, 42);
 }
+
 .nav-red{
     background-color: var(--nav-bg-color) !important;
     /* color: white !important; */

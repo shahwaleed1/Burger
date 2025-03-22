@@ -1,0 +1,11 @@
+.blur-effect {
+    opacity: 0;
+    filter: blur(40px); /* Start with blur */
+    transition: filter 2s ease;
+}
+
+/* Remove blur effect when element becomes visible */
+[data-aos].aos-animate {
+    opacity: 1;
+    filter: blur(0px);
+}
